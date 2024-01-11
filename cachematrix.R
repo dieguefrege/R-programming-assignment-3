@@ -1,24 +1,23 @@
-##FUNCTION 1: Function to create a special matrix object that can cache its inverse
+##FUNCTION 1: Function that creates a matrix object that can cache its inverse
 makeCacheMatrix <- function(mat = matrix()) {
   inverse <- NULL
-  
-  # Function to set the matrix
+  # Make a function to set the matrix
   setMatrix <- function(newMat) {
     mat <<- newMat
     inverse <<- NULL  # Invalidate the cached inverse when the matrix is changed
   }
   
-  # Function to get the matrix
+  # Make a function to get the matrix
   getMatrix <- function() {
     mat
   }
   
-  # Function to set the inverse
+  # Make a function to set the inverse
   setInverse <- function(newInverse) {
     inverse <<- newInverse
   }
   
-  # Function to get the inverse
+  # Make a function to get the inverse
   getInverse <- function() {
     inverse
   }
